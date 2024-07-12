@@ -1,0 +1,57 @@
+.wrapper {
+    width: 255px;
+    cursor: pointer;
+
+    &:hover {
+        .font {
+            opacity: 1;
+        }
+
+        .back {
+            opacity: 0;
+            cursor: pointer;
+        }
+        .btn-add-to-cart {
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+}
+
+.img {
+    position: relative;
+    height: 309px;
+    img {
+        width: 255px;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .font {
+        transition: opacity 0.25s ease-in-out;
+        opacity: 0;
+    }
+
+    .back {
+        position: absolute;
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+.btn-add-to-cart {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    width: 235px;
+    opacity: 0;
+    background-color: #fff;
+    color: #222;
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 0.703125rem 3.125rem 0.5625rem;
+    transition: all 0.15s ease-in-out;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+}

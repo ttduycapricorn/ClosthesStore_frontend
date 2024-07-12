@@ -1,0 +1,107 @@
+.wrapper {
+    min-height: 65vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label-form {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+}
+
+.label {
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    height: 40px;
+    width: 60px;
+}
+
+.inner {
+    position: relative;
+    width: 500px;
+}
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.label-input {
+    position: absolute;
+    top: 1rem;
+    left: 0.75rem;
+    padding: 0 0.25rem;
+    pointer-events: none;
+    border: 0.125rem solid transparent;
+    transform-origin: 0 0;
+    transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+    color: #767676;
+}
+
+.check-remember-and-lostPassword {
+    width: 100%;
+    position: relative;
+    height: 32px;
+    margin-bottom: 1rem;
+
+    .form-check {
+        position: absolute;
+        left: 0px;
+    }
+}
+
+.form-check-input {
+    position: relative;
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.25000625rem;
+    vertical-align: top;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    border: 0.125rem solid #e4e4e4;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out,
+        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    cursor: pointer;
+
+    &:checked:after {
+        content: '';
+        background-color: #222;
+        display: block;
+        position: absolute;
+        left: 0.125rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    &:checked {
+        background-image: none;
+        background-color: #fff;
+        border-color: #222;
+    }
+}
+
+.label-form-check {
+    margin-left: 1.625rem;
+    color: #767676;
+    text-transform: uppercase;
+}
+
+.lostPassword {
+    position: absolute;
+    right: 0px;
+    text-decoration: underline;
+    height: 24px;
+}

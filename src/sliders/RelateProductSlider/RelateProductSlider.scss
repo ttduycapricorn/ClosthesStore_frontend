@@ -1,0 +1,65 @@
+.slick-track {
+    margin-bottom: 1.5rem;
+}
+
+.IconFaSlick {
+    position: absolute;
+    left: 37%;
+    width: 11px;
+    height: 11px;
+    color: black;
+    font-weight: 500;
+}
+
+.ft-slick__dots--custom {
+    position: absolute;
+    width: 1.875rem;
+    height: 1.875rem;
+    background-color: transparent;
+    opacity: 1;
+    outline: none;
+    border-radius: 100%;
+
+    &::after {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0.375rem;
+        height: 0.375rem;
+        margin-top: -0.1875rem;
+        margin-left: -0.1875rem;
+        border-radius: 100%;
+        background-color: currentColor;
+        color: #ddc2bd;
+        content: '';
+    }
+}
+
+.slick-dots {
+    display: flex !important;
+    justify-content: center;
+    height: 30px;
+    li {
+        margin: 0px 10px;
+        display: flex;
+        height: 100%;
+        width: 30px;
+        justify-content: center;
+    }
+}
+
+.slick-active {
+    li {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.slick-dots {
+    .slick-active {
+        .ft-slick__dots--custom {
+            border: 2px solid black;
+        }
+    }
+}

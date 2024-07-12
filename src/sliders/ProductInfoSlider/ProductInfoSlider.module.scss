@@ -1,0 +1,57 @@
+.slider-container {
+    width: 534px;
+}
+
+.dotClassName {
+    position: absolute;
+    top: 0px;
+    left: -90px;
+    width: 50px;
+    ul {
+        margin: 0;
+        padding: 0px;
+    }
+    li {
+        list-style: none;
+        margin-bottom: 10px;
+    }
+}
+
+.ImageItemSlider {
+    width: 100%;
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100px;
+    }
+}
+
+.itemImage {
+    background: transparent;
+    width: 100%;
+    cursor: pointer;
+
+    li {
+        margin-top: 20px;
+    }
+    img {
+        object-fit: cover;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+.slickNextCustom {
+    &:hover {
+        background-color: #ebebeb;
+    }
+}
+
+.IconFaSlick {
+    position: absolute;
+    left: 37%;
+    width: 11px;
+    height: 11px;
+    color: black;
+    font-weight: 500;
+}

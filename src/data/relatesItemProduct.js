@@ -1,0 +1,88 @@
+const data = [
+    {
+        id: '1',
+        Image1: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_5.jpg&w=750&q=75',
+        Image2: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_5-1.jpg&w=750&q=75',
+        title: 'Colorful Jacket',
+        price: '29',
+    },
+    {
+        id: '1',
+        Image1: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_6-1.jpg&w=750&q=75',
+        Image2: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_6.jpg&w=750&q=75',
+        title: 'Shirt In Botanical Cheetah Print',
+        price: '62',
+    },
+    {
+        id: '1',
+        Image1: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_7.jpg&w=750&q=75',
+        Image2: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_7-1.jpg&w=750&q=75',
+        title: 'Cotton Jersey T-Shirt',
+        price: '17',
+    },
+    {
+        id: '1',
+        Image1: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_8.jpg&w=750&q=75',
+        Image2: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_8-1.jpg&w=750&q=75',
+        title: 'Zessi Dresses',
+        price: '99',
+    },
+    {
+        id: '1',
+        Image1: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_9.jpeg&w=750&q=75',
+        Image2: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_9-1.jpeg&w=750&q=75',
+        title: 'Cropped Faux Leather Jacket',
+        price: '29',
+    },
+    {
+        id: '1',
+        Image1: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_10.jpeg&w=750&q=75',
+        Image2: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_10-1.jpeg&w=750&q=75',
+        title: 'Calvin Shorts',
+        price: '62',
+    },
+    {
+        id: '1',
+        Image1: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_11.jpeg&w=750&q=75',
+        Image2: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_11-1.jpeg&w=750&q=75',
+        title: 'Kirby T-Shirt',
+        price: '17',
+    },
+    {
+        id: '1',
+        Image1: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_12.jpeg&w=750&q=75',
+        Image2: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_12-1.jpeg&w=750&q=75',
+        title: 'Cropped Faux Leather Jacket',
+        price: '29',
+    },
+    {
+        id: '1',
+        Image1: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_13.jpeg&w=750&q=75',
+        Image2: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_13-1.jpeg&w=750&q=75',
+        title: 'Colorful Jacket',
+        price: '29',
+    },
+    {
+        id: '1',
+        Image1: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_14.jpeg&w=750&q=75',
+        Image2: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_14-1.jpeg&w=750&q=75',
+        title: 'Shirt In Botanical Cheetah Print',
+        price: '62',
+    },
+    {
+        id: '1',
+        Image1: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_15.jpeg&w=750&q=75',
+        Image2: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_15-1.jpeg&w=750&q=75',
+        title: 'Cotton Jersey T-Shirt',
+        price: '17s',
+    },
+    {
+        id: '1',
+        Image1: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_16.jpeg&w=750&q=75',
+        Image2: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_16-1.jpeg&w=750&q=75',
+        title: 'Zessi Dresses',
+        price: '99',
+    },
+];
+
+export default data;

@@ -1,0 +1,65 @@
+.wrapper {
+    position: relative;
+}
+
+.default {
+    display: block;
+    width: 100%;
+    padding: 0.9375rem 0.9375rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.7143;
+    color: #222;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0.125rem solid #e4e4e4;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    box-shadow: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &:focus {
+        color: #222;
+        background-color: #fff;
+        border-color: #222;
+        outline: 0;
+        box-shadow: none;
+    }
+}
+
+.ErrorInput {
+    display: block;
+    width: 100%;
+    padding: 0.9375rem 0.9375rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.7143;
+    color: #222;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0.125rem solid #dc3545;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    box-shadow: none;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+    &:focus {
+        color: #222;
+        background-color: #fff;
+        border-color: #222;
+        outline: 0;
+        box-shadow: none;
+    }
+}
+
+.icon-see-password {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    height: 20px;
+    width: 20px;
+}
