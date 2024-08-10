@@ -1,4 +1,4 @@
-import ItemProductRelateComponent from '@/components/itemProductRelate';
+import ItemProductRelateComponent from '@/components/items/itemProductRelate';
 import { faArrowRight, faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';

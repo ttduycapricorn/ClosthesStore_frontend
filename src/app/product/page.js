@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-no-comment-textnodes */
 'use client';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus, faStar } from '@fortawesome/free-solid-svg-icons';
@@ -15,7 +15,6 @@ import Button from '@/components/button';
 import RelateProductsSlider from '@/sliders/RelateProductSlider';
 
 import styles from './product.module.scss';
-import axios from 'axios';
 
 const cx = classNames.bind(styles);
 

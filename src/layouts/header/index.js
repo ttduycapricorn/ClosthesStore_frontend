@@ -1,15 +1,17 @@
 'use client';
 /* eslint-disable @next/next/no-img-element */
-import { useState } from 'react';
 import classNames from 'classnames/bind';
 import Link from 'next/link';
+import { useState } from 'react';
 import { faUser, faHeart } from '@fortawesome/free-regular-svg-icons';
 import { faBagShopping, faMagnifyingGlass, faBars, faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-import SearchModal from '@/modals/searchModal';
+import { usePathname } from 'next/navigation';
 
 import styles from './header.module.scss';
+
+import CartSidebar from '@/components/sidebar/cartSidebar';
+import { dataShopping } from '@/data/cartShoppingData';
 
 const cx = classNames.bind(styles);
 
@@ -20,23 +22,23 @@ const ListMenuItem = [
     },
     {
         tittle: 'shop',
-        src: '/',
+        src: '/shop',
     },
     {
         tittle: 'blog',
-        src: '/',
+        src: '/blog',
     },
     {
         tittle: 'pages',
-        src: '/',
+        src: '/pages',
     },
     {
         tittle: 'about',
-        src: '/',
+        src: '/about',
     },
     {
         tittle: 'contact',
-        src: '/',
+        src: '/contact',
     },
 ];
 
@@ -45,7 +47,7 @@ function HeaderComponent() {
 
     const [openSearch, setOpenSearch] = useState(false);
 
-    const [openModalSearch, setOpenModalSearch] = useState(false);
+    const pathName = usePathname();
 
     return (
         <div className={cx('wrapper')}>
@@ -61,7 +63,7 @@ function HeaderComponent() {
             <div className={cx('menus')}>
                 {ListMenuItem.map((item, index) => {
                     return (
-                        <div className={cx('MenuItem')} key={index}>
+                        <div className={pathName === item.src ? cx('MenuItem', 'active') : cx('MenuItem')} key={index}>
                             <Link href={item.src}>{item.tittle}</Link>
                         </div>
                     );
@@ -88,9 +90,14 @@ function HeaderComponent() {
                     </div>
                 </div>
                 <div className={cx('item-action')}>
-                    <Link href={'/cart'} className={cx('icon')}>
+                    {/* <Link href={'/cart'} className={cx('icon')} onClick={() => {}}>
                         <FontAwesomeIcon icon={faBagShopping} />
-                    </Link>
+                    </Link> */}
+                    <CartSidebar
+                        name={<FontAwesomeIcon icon={faBagShopping} />}
+                        placement={'end'}
+                        data={dataShopping}
+                    />
                     <span className={cx('cart-amount')}>{cartMount || 0}</span>
                 </div>
                 <div className={cx('item-action')}>

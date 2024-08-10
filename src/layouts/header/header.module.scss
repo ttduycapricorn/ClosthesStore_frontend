@@ -68,10 +68,14 @@
     }
 }
 
+.active {
+    color: #c32929;
+}
+
 .cart-amount {
     position: absolute;
     top: calc(2.25rem + 1em);
-    left: calc(83.5rem + 2em);
+    left: calc(83.9rem + 3em);
     width: 0.75rem;
     height: 0.75rem;
     border-radius: 100%;

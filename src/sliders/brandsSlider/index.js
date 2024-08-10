@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import classNames from 'classnames/bind';
 
 import styles from './brandsSlider.module.scss';
-import ItemBrandSlider from '@/components/itemBrandSlider';
+import ItemBrandSlider from '@/components/items/itemBrandSlider';
 
 const cx = classNames.bind(styles);
 

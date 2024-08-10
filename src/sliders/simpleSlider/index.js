@@ -1,5 +1,5 @@
 'use client';
-import ItemProductInHomePage from '@/components/ItemProduct/ItemProductInHomePage';
+import ItemProductInHomePage from '@/components/items/ItemProduct/ItemProductInHomePage';
 import Slider from 'react-slick';
 import classNames from 'classnames/bind';
 

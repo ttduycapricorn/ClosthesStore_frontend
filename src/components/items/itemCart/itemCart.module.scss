@@ -1,0 +1,60 @@
+.wrapper {
+    width: 340px;
+    display: flex;
+}
+.image {
+    width: 7.5rem;
+    height: fit-content;
+}
+
+.info {
+    position: relative;
+    width: 100%;
+    margin-left: 20px;
+}
+
+.iconRemove {
+    position: absolute;
+    top: 0;
+    right: 0;
+    size: 10px;
+    cursor: pointer;
+}
+
+.title-product {
+    font-weight: 400;
+}
+
+.text-color,
+.text-size {
+    color: var(--text-color-gray);
+}
+
+.price-change-by-count {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 196px;
+}
+
+.select-price {
+    display: flex;
+    width: 54px;
+    height: 24px;
+}
+
+.btn-down,
+.btn-up {
+    width: 0.75rem;
+}
+
+.input-count {
+    border: none;
+    text-align: center;
+    width: 100%;
+    background-color: white;
+}
+
+.price {
+    right: 0px;
+}

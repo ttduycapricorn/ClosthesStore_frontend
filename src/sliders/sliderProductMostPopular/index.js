@@ -3,7 +3,7 @@ import Slider from 'react-slick';
 import classNames from 'classnames/bind';
 
 import styles from './simpleSlider.module.scss';
-import ItemProductMostPopular from '@/components/ItemProductMostPopular';
+import ItemProductMostPopular from '@/components/items/ItemProductMostPopular';
 
 const cx = classNames.bind(styles);
 
