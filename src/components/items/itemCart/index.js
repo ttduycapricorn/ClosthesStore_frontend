@@ -10,7 +10,7 @@ import { faX } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
 
-function ItemCart(props, { onClick }) {
+function ItemCart(props) {
     const [count, setCount] = useState(1);
     const [price, setPrice] = useState(props.price);
 
@@ -20,7 +20,7 @@ function ItemCart(props, { onClick }) {
                 <img className={cx('image')} src={props.src} />
 
                 <div className={cx('info')}>
-                    <button onClick={onClick(props.id)}>
+                    <button onClick={props.onClick(props.id)}>
                         <FontAwesomeIcon icon={faX} className={cx('iconRemove')} />
                     </button>
                     <h6 className={cx('title-product')}>{props.title}</h6>

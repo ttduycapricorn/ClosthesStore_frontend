@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBagShopping } from '@fortawesome/free-solid-svg-icons';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import Link from 'next/link';
 
 import styles from './cartSidebar.module.scss';
 
@@ -19,7 +20,7 @@ function CartSidebar({ name, ...props }) {
     const handleShow = () => setShow(true);
 
     const handelRemoveItemCartFromList = (id) => {
-        const newList = items.filter((item) => item.id !== id);
+        const newList = items.filter((item) => id !== item.id);
         setItems(newList);
     };
 
@@ -39,17 +40,15 @@ function CartSidebar({ name, ...props }) {
                         {items ? (
                             items.map((item) => {
                                 return (
-                                    <>
-                                        <ItemCart
-                                            key={item.id}
-                                            src={item.src}
-                                            title={item.title}
-                                            price={item.price}
-                                            color={item.color}
-                                            size={item.size}
-                                            onClick={handelRemoveItemCartFromList(item.id)}
-                                        />
-                                    </>
+                                    <ItemCart
+                                        key={item.id}
+                                        src={item.src}
+                                        title={item.title}
+                                        price={item.price}
+                                        color={item.color}
+                                        size={item.size}
+                                        onClick={handelRemoveItemCartFromList(item.id)}
+                                    />
                                 );
                             })
                         ) : (
@@ -64,8 +63,24 @@ function CartSidebar({ name, ...props }) {
                             <span>${446}</span>
                         </div>
 
-                        <button className={cx('btn-viewCart')}>View cart</button>
-                        <button className={cx('btn-checkOut')}>Checkout</button>
+                        <Link
+                            href={'/cart'}
+                            className={cx('btn-viewCart')}
+                            onClick={() => {
+                                setShow(false);
+                            }}
+                        >
+                            <button>View cart</button>
+                        </Link>
+                        <Link
+                            href={'/checkout'}
+                            className={cx('btn-checkOut')}
+                            onClick={() => {
+                                setShow(false);
+                            }}
+                        >
+                            Checkout
+                        </Link>
                     </div>
                 </Offcanvas.Body>
             </Offcanvas>

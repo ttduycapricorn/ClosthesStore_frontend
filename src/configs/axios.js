@@ -1,0 +1,4 @@
+const GlobalBackEndURL = '',
+    exports = {
+        GlobalBackEndURL,
+    };

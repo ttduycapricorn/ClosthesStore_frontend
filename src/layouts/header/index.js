@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import Link from 'next/link';
 import { useState } from 'react';
 import { faUser, faHeart } from '@fortawesome/free-regular-svg-icons';
-import { faBagShopping, faMagnifyingGlass, faBars, faX } from '@fortawesome/free-solid-svg-icons';
+import { faBagShopping, faMagnifyingGlass, faX } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { usePathname } from 'next/navigation';
 
@@ -12,6 +12,8 @@ import styles from './header.module.scss';
 
 import CartSidebar from '@/components/sidebar/cartSidebar';
 import { dataShopping } from '@/data/cartShoppingData';
+import LargeModal from '@/components/modals/largeModal';
+import SearchModal from '@/components/modals/SearchModal';
 
 const cx = classNames.bind(styles);
 
@@ -74,7 +76,7 @@ function HeaderComponent() {
                 <div className={cx('item-action')}>
                     <div className={cx('icon')} onClick={() => setOpenSearch(!openSearch)}>
                         <FontAwesomeIcon icon={openSearch === false ? faMagnifyingGlass : faX} />
-                        {/* <SearchModal show={openModalSearch} onHide={setOpenModalSearch(false)} /> */}
+                        <SearchModal />
                     </div>
                 </div>
                 <div className={cx('item-action')}>
@@ -94,16 +96,17 @@ function HeaderComponent() {
                         <FontAwesomeIcon icon={faBagShopping} />
                     </Link> */}
                     <CartSidebar
-                        name={<FontAwesomeIcon icon={faBagShopping} />}
+                        name={<FontAwesomeIcon icon={faBagShopping} style={{ width: '52px' }} />}
                         placement={'end'}
                         data={dataShopping}
                     />
                     <span className={cx('cart-amount')}>{cartMount || 0}</span>
                 </div>
                 <div className={cx('item-action')}>
-                    <div className={cx('icon')}>
+                    <LargeModal />
+                    {/* <div className={cx('icon')}>
                         <FontAwesomeIcon icon={faBars} />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

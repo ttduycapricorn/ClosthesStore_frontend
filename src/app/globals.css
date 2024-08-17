@@ -10,6 +10,8 @@
     --gray: #faf9f8;
     --text-color-gray: #767676;
     --color-hr: #e4e4e4;
+
+    --bs-gutter-x: 1.875rem;
 }
 
 * {
@@ -95,4 +97,12 @@ body ::-webkit-scrollbar {
     width: 0.25rem;
     height: 0.25rem;
     background-color: #fff;
+}
+
+.faded {
+    opacity: 0;
+}
+
+.show {
+    opacity: 1;
 }

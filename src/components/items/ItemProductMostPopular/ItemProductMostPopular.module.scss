@@ -48,7 +48,8 @@
     width: 78px;
 }
 
-.swatch-color {
+.swatch-color,
+.active {
     display: block;
     position: relative;
     width: 1.25rem;
@@ -77,6 +78,10 @@
     &:active {
         border: 2px solid black;
     }
+}
+
+.active {
+    border: 2px solid black;
 }
 
 .position-iconLove {
