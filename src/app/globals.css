@@ -10,7 +10,6 @@
     --gray: #faf9f8;
     --text-color-gray: #767676;
     --color-hr: #e4e4e4;
-
     --bs-gutter-x: 1.875rem;
 }
 
@@ -105,4 +104,43 @@ body ::-webkit-scrollbar {
 
 .show {
     opacity: 1;
+}
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #222;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 0;
+    transition: all 0.15s ease-in-out;
+    font-size: 0.875rem;
+    padding: 0.703125rem 3.125rem 0.5625rem;
+    background-color: #767676;
+}
+
+table {
+    thead {
+        tr {
+            th {
+                font-size: 0.875rem;
+                text-transform: uppercase;
+                font-weight: 500;
+                padding: 0 0 0.625rem;
+            }
+        }
+    }
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
