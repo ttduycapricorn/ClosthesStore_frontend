@@ -5,7 +5,7 @@ import { toast } from 'sonner';
 import { useState } from 'react';
 
 import Button from '@/components/button';
-import InputComponent from '@/components/input';
+import InputComponent from '@/components/input/iconic';
 
 import styles from './loginPage.module.scss';
 

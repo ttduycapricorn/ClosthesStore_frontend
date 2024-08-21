@@ -7,10 +7,13 @@
     --tw-ring-shadow: 0 0 #0000;
     --tw-shadow: var(--ds-shadow-border-medium);
 
+    --black: #222
     --gray: #faf9f8;
     --text-color-gray: #767676;
     --color-hr: #e4e4e4;
     --bs-gutter-x: 1.875rem;
+
+    --content-space: 2.5rem;
 }
 
 * {
@@ -143,4 +146,14 @@ input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+
+hr{
+    border: none;
+    margin: 0;
+}
+
+.container{
+    max-width: 1140px;
 }

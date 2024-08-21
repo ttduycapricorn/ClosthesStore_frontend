@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
 import classNames from 'classnames/bind';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus, faX } from '@fortawesome/free-solid-svg-icons';
 
@@ -39,10 +39,6 @@ function CartPage() {
     const handleRemoveItem = (id) => {
         axios.delete('', data);
     };
-
-    // useEffect(() => {
-    //     setItems(axios.get(''));
-    // }, []);
 
     return (
         <div className="container">
@@ -120,7 +116,45 @@ function CartPage() {
                         </table>
                     </div>
                     <div className={cx('shoppingCart-total')}>
-                        <div className={cx('sticky-content')}></div>
+                        <div className={cx('sticky-content')}>
+                            <h3>Cart Totals</h3>
+
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th>Subtotal</th>
+                                        <td>$ 99</td>
+                                    </tr>
+                                    <tr>
+                                        <th>shipping</th>
+                                        <td style={{ padding: '.875rem 0' }}>
+                                            <div className={cx('from-check')}>
+                                                <input
+                                                    className={cx('form-check-input-fill', 'checked')}
+                                                    type="checked"
+                                                />
+                                                <label>Free shipping</label>
+                                            </div>
+                                            <div className={cx('from-check')}>
+                                                <input
+                                                    className={cx('form-check-input-fill', 'checked')}
+                                                    type="checked"
+                                                />
+                                                <label>Flat rate: $49</label>
+                                            </div>
+                                            <div className={cx('from-check')}>
+                                                <input
+                                                    className={cx('form-check-input-fill', 'checked')}
+                                                    type="checked"
+                                                />
+                                                <label>Local pickup: $8</label>
+                                            </div>
+                                            <div className={cx('form-check')}>Shipping to AL.</div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             ) : (

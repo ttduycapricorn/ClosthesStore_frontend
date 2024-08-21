@@ -1,3 +1,8 @@
+.content {
+    display: flex;
+    gap: 3.625rem;
+}
+
 .title-cart-page {
     font-size: 2.1875rem;
     margin-bottom: 3.125rem;
@@ -22,9 +27,8 @@
 }
 
 .item-cartItem {
-    tr {
-        border-top: 1px solid #e4e4e4;
-    }
+    border-top: 2px solid #e4e4e4;
+    transition: all 0.3s ease;
 }
 
 .Img-cartItem {
@@ -101,4 +105,79 @@
     position: sticky;
     top: 0;
     padding-bottom: 1px;
+}
+
+.shoppingCart-total,
+.sticky-content {
+    width: 26.25rem;
+}
+
+.sticky-content {
+    border: 1px solid #222;
+    margin-bottom: 1.25rem;
+    padding: 2.5rem 2.5rem 0.5rem;
+    max-width: 100%;
+
+    table {
+        width: 100%;
+    }
+
+    h3 {
+        font-size: 1rem;
+        text-transform: uppercase;
+        margin-bottom: 1.25rem;
+    }
+
+    tr {
+        border-bottom: 1px solid #e4e4e4;
+        font-size: 0.875rem;
+        font-weight: 500;
+    }
+
+    th {
+        text-transform: uppercase;
+        font-weight: 500;
+        vertical-align: baseline;
+        padding: 0.875rem 0;
+    }
+}
+
+.from-check {
+    display: block;
+    position: relative;
+    min-height: 1.5rem;
+    padding-left: 1.625rem;
+    margin-bottom: 1rem;
+}
+
+.form-check-input-fill,
+.checked {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    border-radius: 0px;
+    border: 2px solid var(--color-hr);
+    float: left;
+    cursor: pointer;
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0.125rem;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 0.5rem;
+        height: 0.5rem;
+        background-color: transparent;
+
+        :checked {
+            background-color: #222;
+        }
+    }
+}
+
+.checked {
+    &::after {
+        background-color: #222;
+    }
 }

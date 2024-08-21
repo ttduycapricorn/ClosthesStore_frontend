@@ -1,314 +1,682 @@
-.Image1 {
-    z-index: -1;
-    top: 10px;
-    width: 100%;
-    object-fit: cover;
+// .Image1 {
+//     z-index: -1;
+//     top: 10px;
+//     width: 100%;
+//     object-fit: cover;
+// }
+
+// .slide-show-text {
+//     position: absolute;
+//     top: 6%;
+//     left: 14%;
+//     width: 1110px;
+// }
+
+// .text_dash {
+//     display: flex;
+//     align-items: center;
+//     padding-left: 52px;
+//     color: #e4e4e4;
+//     width: 129.36px;
+//     height: 41px;
+//     text-transform: uppercase;
+//     h6 {
+//         font-size: 50px;
+//     }
+
+//     &::before {
+//         content: '';
+//         position: absolute;
+//         // top: 50%;
+//         left: 0;
+//         width: 2.5rem;
+//         height: 2px;
+//         margin-top: -1px;
+//         background-color: currentColor;
+//         color: #e4e4e4;
+//     }
+// }
+
+// .Upto_ {
+//     width: 100%;
+//     height: 45px;
+//     margin-bottom: 16px;
+//     font-weight: 600;
+//     color: #e4e4e4;
+//     text-transform: uppercase;
+// }
+
+// .shop-by-shape-wrapper {
+//     margin-top: 100px;
+//     align-items: center;
+//     text-align: center;
+//     width: 100%;
+// }
+
+// .tittle_shop-by-shape-wrapper {
+//     width: 100%;
+//     font-weight: 400;
+//     text-align: center;
+//     font-size: 2.1875rem;
+//     text-transform: uppercase;
+// }
+
+// .sliderProductHomePage {
+//     margin-bottom: 40px;
+// }
+
+// .bgImgWrapper {
+//     width: 100%;
+//     display: flex;
+//     height: 500px;
+// }
+
+// .bgImg1,
+// .bgImg2 {
+//     img {
+//         object-fit: cover;
+//         width: 712px;
+//         height: 500px;
+//     }
+// }
+
+// .bgImg1 {
+//     left: 0px;
+// }
+
+// .bgImg2 {
+//     position: absolute;
+//     right: 0px;
+// }
+
+// .content-bgImg {
+//     position: relative;
+//     left: 73px;
+//     bottom: 241px;
+//     padding-top: 73px;
+//     padding-right: 73px;
+//     color: #e4e4e4;
+// }
+
+// .textCollection {
+//     font-size: 0.875rem !important;
+//     font-weight: 500;
+//     margin-bottom: 8px;
+//     text-transform: uppercase;
+// }
+// .textSungLasses {
+//     font-size: 1.25rem;
+//     font-weight: 600;
+//     text-transform: uppercase;
+//     margin-bottom: 16px;
+// }
+// .textShopNow {
+//     font-weight: 500;
+//     text-transform: uppercase;
+//     transition: 0.01s ease-in-out;
+//     &::after {
+//         content: '';
+//         display: block;
+//         position: absolute;
+//         top: 100%;
+//         left: 0;
+//         width: 10%;
+//         height: 2px;
+//         transition: width 0.28s cubic-bezier(0.47, 0, 0.745, 0.715);
+//         background-color: currentColor;
+//     }
+
+//     &:hover::after {
+//         width: 20%;
+//     }
+// }
+
+// .content-bgImg2 {
+//     position: absolute;
+//     left: 73px;
+//     bottom: 73px;
+//     padding-top: 73px;
+//     padding-right: 73px;
+//     color: #e4e4e4;
+// }
+
+// .shop-by-shape-wrapper2 {
+//     margin-top: 40px;
+//     align-items: center;
+//     text-align: center;
+//     width: 100%;
+// }
+
+// .slider-show-bg {
+//     position: relative;
+//     width: 100%;
+//     display: grid;
+//     align-content: center;
+// }
+
+// .img-slider-show-bg {
+//     z-index: -1;
+// }
+
+// .block-newLetter {
+//     position: absolute;
+//     top: 0px;
+//     border: 1px solid;
+// }
+// .block-title {
+//     position: absolute;
+//     top: 200px;
+//     left: 370px;
+//     color: #222;
+//     font-weight: 600;
+//     font-size: 2.1875rem;
+// }
+
+// .text-Get-the-latest {
+//     position: absolute;
+//     color: #222;
+//     top: 250px;
+//     left: 460px;
+//     margin-bottom: 1.5rem;
+// }
+
+// .block-newsletter__form {
+//     position: absolute;
+//     display: flex;
+//     top: 297px;
+//     left: 380px;
+//     height: 53px;
+//     width: 739px;
+//     gap: 1.25rem;
+// }
+
+// .form-control {
+//     display: block;
+//     width: 100%;
+//     padding: 0.9375rem 0.9375rem 0.75rem;
+//     font-size: 0.875rem;
+//     font-weight: 400;
+//     height: 100%;
+//     line-height: 1.7143;
+//     color: #222;
+//     background-color: #fff;
+//     background-clip: padding-box;
+//     border: 0.125rem solid #e4e4e4;
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     appearance: none;
+//     border-radius: 0;
+//     box-shadow: none;
+//     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+//     border-width: 1px;
+//     border-color: #e4e4e4;
+// }
+
+// .btn-JOIN {
+//     text-align: center;
+//     text-transform: uppercase;
+//     background-color: #193174;
+//     color: #fff;
+//     font-weight: 600;
+//     line-height: 1.5;
+//     padding: 11.25px 50px 9px 50px;
+// }
+
+// .slider-brand {
+//     margin: 100px 165px;
+//     width: 1110px;
+//     height: 31px;
+//     padding: 0px 15px;
+//     text-align: center;
+// }
+
+// .title-slider-brand {
+//     text-transform: uppercase;
+//     font-weight: 500;
+//     margin-bottom: 20px;
+// }
+
+// .section-shop-our-instagram {
+//     text-align: center;
+// }
+
+// .title-shop-out-instagram {
+//     text-transform: uppercase;
+//     font-weight: 400;
+//     font-style: italic;
+// }
+
+// .section-shop-our-instagram {
+//     width: 100%;
+// }
+
+// .wrapper-section-shop-our-instagram {
+//     --bs-gutter-x: 1.875rem;
+//     --bs-gutter-y: 0;
+//     display: flex;
+//     flex-wrap: wrap;
+//     margin-top: calc(var(--bs-gutter-y) * -1);
+//     margin-right: calc(var(--bs-gutter-x) / -2);
+//     margin-left: calc(var(--bs-gutter-x) / -2);
+// }
+
+// .overlay-plus {
+//     height: 156px;
+//     width: 156px;
+// }
+
+// .overlay-plus::before {
+//     // top: 0;
+//     // bottom: 0;
+//     // left: 0;
+//     // right: 0;
+//     // content: '';
+//     // position: absolute;
+//     // height: 156px;
+//     // width: 156px;
+//     // margin: auto;
+//     // transition: all 0.5s ease;
+//     // z-index: 2;
+//     // background-color: hsla(0, 0%, 100%, 0.15);
+
+//     // &:hover {
+//     //     width: 0;
+//     // }
+// }
+
+// .overlay-plus::after {
+//     // top: 0;
+//     // bottom: 0;
+//     // left: 0;
+//     // right: 0;
+//     // content: '';
+//     // position: absolute;
+//     // width: 156px;
+//     // height: 156px;
+//     // margin: auto;
+//     // transition: all 0.5s ease;
+//     // z-index: 2;
+//     // background-color: hsla(0, 0%, 100%, 0.15);
+
+//     // &:hover {
+//     //     height: 0;
+//     // }
+// }
+
+// .instagram-title {
+//     padding: 14px;
+// }
+
+// .img-link {
+//     width: 156px;
+//     height: 156px;
+//     object-fit: cover;
+// }
+
+.swiper-wrapper {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    transform: translateZ(0);
 }
 
-.slide-show-text {
+.swiper-bg {
+    background-color: rgb(245, 230, 224);
+    height: 100%;
+    float: -1;
+}
+
+.slideShow-character {
     position: absolute;
-    top: 6%;
-    left: 14%;
-    width: 1110px;
+    left: 60%;
+    bottom: 0;
+    float: 1;
+
+    img {
+        width: 200px;
+    }
 }
 
-.text_dash {
-    display: flex;
-    align-items: center;
-    padding-left: 52px;
-    color: #e4e4e4;
-    width: 129.36px;
-    height: 41px;
+.slideShow-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 1140px;
+    padding: 0px 15px;
+    transform: translate(-50%, -50%) !important;
+}
+
+.text-NewTrend {
+    position: relative;
     text-transform: uppercase;
-    h6 {
-        font-size: 50px;
-    }
+    color: #c32929;
+    padding-left: 3.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
 
     &::before {
         content: '';
         position: absolute;
-        // top: 50%;
+        top: 50%;
         left: 0;
         width: 2.5rem;
         height: 2px;
         margin-top: -1px;
         background-color: currentColor;
-        color: #e4e4e4;
+        color: inherit;
     }
 }
 
-.Upto_ {
-    width: 100%;
-    height: 45px;
-    margin-bottom: 16px;
-    font-weight: 600;
-    color: #e4e4e4;
+.text-summerSaleStylish {
     text-transform: uppercase;
-}
-
-.shop-by-shape-wrapper {
-    margin-top: 100px;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-}
-
-.tittle_shop-by-shape-wrapper {
-    width: 100%;
+    color: var(--black);
+    opacity: 1;
+    visibility: visible;
+    font-size: 4.375rem;
     font-weight: 400;
-    text-align: center;
-    font-size: 2.1875rem;
+}
+
+.text-women {
     text-transform: uppercase;
+    font-size: 4.375rem;
+    font-weight: 700;
 }
 
-.sliderProductHomePage {
-    margin-bottom: 40px;
-}
+.link-discoverMore {
+    position: relative;
+    color: var(--black);
+    background-color: transparent;
+    text-transform: uppercase;
+    font-weight: 500;
 
-.bgImgWrapper {
-    width: 100%;
-    display: flex;
-    height: 500px;
-}
+    &::after {
+        position: absolute;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 80%;
+        max-width: 100%;
+        height: 2px;
+        transition: width 0.28s cubic-bezier(0.47, 0, 0.745, 0.715);
+        background-color: currentColor;
+    }
 
-.bgImg1,
-.bgImg2 {
-    img {
-        object-fit: cover;
-        width: 712px;
-        height: 500px;
+    &:hover {
+        &::after {
+            width: 100%;
+        }
     }
 }
 
-.bgImg1 {
-    left: 0px;
+.collections-grid_masonry {
+    height: 30rem;
 }
 
-.bgImg2 {
+.background-img {
+    background-image: url('https://uomo-nextjs-ecommerce.vercel.app/assets/images/collection_grid_1.jpg');
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.hot-list-wrapper {
     position: absolute;
-    right: 0px;
+    --content-space: 1.875rem;
+    left: var(--content-space);
+    padding-right: var(--content-space);
+    bottom: var(--content-space);
+    padding-top: var(--content-space);
 }
 
-.content-bgImg {
+.btn-link {
+    display: inline-block;
     position: relative;
-    left: 73px;
-    bottom: 241px;
-    padding-top: 73px;
-    padding-right: 73px;
-    color: #e4e4e4;
-}
+    padding: 0;
+    border: 0;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: var(--black);
+    cursor: pointer;
 
-.textCollection {
-    font-size: 0.875rem !important;
-    font-weight: 500;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-}
-.textSungLasses {
-    font-size: 1.25rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-}
-.textShopNow {
-    font-weight: 500;
-    text-transform: uppercase;
-    transition: 0.01s ease-in-out;
     &::after {
         content: '';
         display: block;
         position: absolute;
         top: 100%;
         left: 0;
-        width: 10%;
         height: 2px;
-        transition: width 0.28s cubic-bezier(0.47, 0, 0.745, 0.715);
+        width: 3.125rem;
         background-color: currentColor;
+        transition: width 0.28s cubic-bezier(0.47, 0, 0.745, 0.715);
     }
 
-    &:hover::after {
-        width: 20%;
+    &:hover {
+        &::after {
+            width: 100%;
+        }
     }
 }
 
-.content-bgImg2 {
-    position: absolute;
-    left: 73px;
-    bottom: 73px;
-    padding-top: 73px;
-    padding-right: 73px;
-    color: #e4e4e4;
+.collection-gid_item {
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    position: relative;
+    height: auto;
 }
 
-.shop-by-shape-wrapper2 {
-    margin-top: 40px;
-    align-items: center;
-    text-align: center;
+.back-ground-img {
+    background-image: url('https://uomo-nextjs-ecommerce.vercel.app/assets/images/collection_grid_2.jpg');
+    position: absolute !important;
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50%;
 }
 
-.slider-show-bg {
+.collection-gid-item-second {
+    margin-top: 0.25rem;
+    flex-grow: 1;
     position: relative;
     width: 100%;
-    display: grid;
-    align-content: center;
 }
 
-.img-slider-show-bg {
-    z-index: -1;
+.background-img-2,
+.background-img-3 {
+    height: 100%;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50%;
 }
 
-.block-newLetter {
-    position: absolute;
-    top: 0px;
-    border: 1px solid;
+.background-img-2 {
+    background-image: url('https://uomo-nextjs-ecommerce.vercel.app/assets/images/collection_grid_3.jpg');
 }
-.block-title {
-    position: absolute;
-    top: 200px;
-    left: 370px;
-    color: #222;
-    font-weight: 600;
+
+.background-img-3 {
+    background-color: rgb(245, 230, 224);
+}
+
+// section gifts
+.section-title {
+    text-transform: uppercase;
+    text-align: center;
     font-size: 2.1875rem;
-}
-
-.text-Get-the-latest {
-    position: absolute;
-    color: #222;
-    top: 250px;
-    left: 460px;
+    padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
 }
 
-.block-newsletter__form {
-    position: absolute;
-    display: flex;
-    top: 297px;
-    left: 380px;
-    height: 53px;
-    width: 739px;
-    gap: 1.25rem;
-}
-
-.form-control {
-    display: block;
-    width: 100%;
-    padding: 0.9375rem 0.9375rem 0.75rem;
-    font-size: 0.875rem;
-    font-weight: 400;
-    height: 100%;
-    line-height: 1.7143;
-    color: #222;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 0.125rem solid #e4e4e4;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border-radius: 0;
-    box-shadow: none;
-    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    border-width: 1px;
-    border-color: #e4e4e4;
-}
-
-.btn-JOIN {
-    text-align: center;
-    text-transform: uppercase;
-    background-color: #193174;
-    color: #fff;
-    font-weight: 600;
-    line-height: 1.5;
-    padding: 11.25px 50px 9px 50px;
-}
-
-.slider-brand {
-    margin: 100px 165px;
-    width: 1110px;
-    height: 31px;
-    padding: 0px 15px;
-    text-align: center;
-}
-
-.title-slider-brand {
-    text-transform: uppercase;
+.nav-link,
+.active {
+    cursor: pointer;
+    position: relative;
+    align-items: center;
     font-weight: 500;
-    margin-bottom: 20px;
-}
-
-.section-shop-our-instagram {
+    cursor: pointer;
     text-align: center;
+    gap: 3rem;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #222;
+        transition: width 0.36s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    &:hover {
+        color: var(--black);
+        &::after {
+            width: 100%;
+        }
+    }
 }
 
-.title-shop-out-instagram {
-    text-transform: uppercase;
-    font-weight: 400;
-    font-style: italic;
+.nav-link {
+    color: #767676;
 }
 
-.section-shop-our-instagram {
+.active {
+    color: var(--black);
+    &::after {
+        width: 100%;
+    }
+}
+
+.tab-content {
+    padding-top: 8px;
+}
+
+.deal-timer {
+    min-height: 31.25rem;
+    padding: 2.5rem 0;
+    height: 100%;
     width: 100%;
 }
 
-.wrapper-section-shop-our-instagram {
-    --bs-gutter-x: 1.875rem;
-    --bs-gutter-y: 0;
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(var(--bs-gutter-y) * -1);
-    margin-right: calc(var(--bs-gutter-x) / -2);
-    margin-left: calc(var(--bs-gutter-x) / -2);
+.backGround_deal_timer {
+    background-image: url('https://uomo-nextjs-ecommerce.vercel.app/assets/images/deal_timer_bg.jpg');
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50%;
 }
 
-.overlay-plus {
-    height: 156px;
-    width: 156px;
+.deal-timer-wrapper {
+    position: relative;
+    max-width: 1140px;
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.9375rem);
+    padding-left: var(--bs-gutter-x, 0.9375rem);
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.overlay-plus::before {
-    // top: 0;
-    // bottom: 0;
-    // left: 0;
-    // right: 0;
-    // content: '';
-    // position: absolute;
-    // height: 156px;
-    // width: 156px;
-    // margin: auto;
-    // transition: all 0.5s ease;
-    // z-index: 2;
-    // background-color: hsla(0, 0%, 100%, 0.15);
-
-    // &:hover {
-    //     width: 0;
-    // }
+.deal-timer-content {
+    padding-bottom: 3rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-.overlay-plus::after {
-    // top: 0;
-    // bottom: 0;
-    // left: 0;
-    // right: 0;
-    // content: '';
-    // position: absolute;
-    // width: 156px;
-    // height: 156px;
-    // margin: auto;
-    // transition: all 0.5s ease;
-    // z-index: 2;
-    // background-color: hsla(0, 0%, 100%, 0.15);
+.text-dash {
+    font-weight: 500;
+    position: relative;
+    padding-left: 3.25rem;
 
-    // &:hover {
-    //     height: 0;
-    // }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 2.5rem;
+        height: 2px;
+        margin-top: -1px;
+        background-color: currentColor;
+        color: inherit;
+    }
 }
 
-.instagram-title {
-    padding: 14px;
+.countdown-unit,
+.countdown-unit-seconds {
+    --countdown-space: 1.125rem;
+    position: relative;
+    min-width: 4.375rem;
+    padding-right: calc(var(--countdown-space) * 2);
+    line-height: 1;
+    min-width: 6.25rem;
+    font-size: 1.875rem;
 }
 
-.img-link {
-    width: 156px;
-    height: 156px;
-    object-fit: cover;
+.countdown-unit {
+    &::after {
+        content: ':';
+        display: block;
+        position: absolute;
+        top: 0;
+        right: var(--countdown-space);
+    }
+}
+
+// GRIP BANNERS
+
+.grid-banner {
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.9375rem);
+    padding-left: var(--bs-gutter-x, 0.9375rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.grid-banner-item {
+    position: relative;
+    min-height: 24.875rem;
+    margin-bottom: 1rem;
+}
+
+.backGround-Img,
+.backGround-Img2 {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.backGround-Img {
+    background-image: url('https://uomo-nextjs-ecommerce.vercel.app/assets/images/banner_1.jpg');
+}
+
+.backGround-Img2 {
+    background-image: url('https://uomo-nextjs-ecommerce.vercel.app/assets/images/banner_2.jpg');
+}
+
+.content_abs {
+    left: var(--content-space);
+    padding-right: var(--content-space);
+    bottom: var(--content-space);
+    padding-top: var(--content-space);
+    position: absolute;
 }
