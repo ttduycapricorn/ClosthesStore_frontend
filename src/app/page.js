@@ -14,6 +14,9 @@ import { useState } from 'react';
 import styles from './page.module.scss';
 import ItemCartProduct from '@/components/items/itemCartProduct';
 import { useCountdown } from '@/hooks/CountDownHook';
+import SliderProductHomePage from '@/sliders/sliderProductInHomePage';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartFlatbed, faHeadset, faShieldAlt, faShieldHalved } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
 
@@ -32,9 +35,91 @@ const Items_product = [
     },
 ];
 
+const List_instagram = [
+    {
+        src: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Finstagram%2Finsta1.jpg&w=640&q=75',
+    },
+    {
+        src: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Finstagram%2Finsta1.jpg&w=640&q=75',
+    },
+    {
+        src: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Finstagram%2Finsta1.jpg&w=640&q=75',
+    },
+    {
+        src: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Finstagram%2Finsta1.jpg&w=640&q=75',
+    },
+    {
+        src: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Finstagram%2Finsta1.jpg&w=640&q=75',
+    },
+    {
+        src: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Finstagram%2Finsta1.jpg&w=640&q=75',
+    },
+    {
+        src: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Finstagram%2Finsta1.jpg&w=640&q=75',
+    },
+    {
+        src: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Finstagram%2Finsta1.jpg&w=640&q=75',
+    },
+    {
+        src: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Finstagram%2Finsta1.jpg&w=640&q=75',
+    },
+    {
+        src: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Finstagram%2Finsta1.jpg&w=640&q=75',
+    },
+    {
+        src: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Finstagram%2Finsta1.jpg&w=640&q=75',
+    },
+    {
+        src: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Finstagram%2Finsta1.jpg&w=640&q=75',
+    },
+];
+
 export default function Home() {
     const [selectProductGift, setSelectProductGift] = useState('all');
     const [days, hours, minutes, seconds] = useCountdown('Aug 5, 2025 00:00:00');
+
+    const MyArray = [
+        {
+            src: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Finstagram%2Finsta1.jpg&w=640&q=75',
+            title: 'T-shirt',
+            price: '66',
+            quality: '2',
+        },
+        {
+            src: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Finstagram%2Finsta1.jpg&w=640&q=75',
+            title: 'T-shirt',
+            price: '66',
+            quality: '2',
+        },
+        {
+            src: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Finstagram%2Finsta1.jpg&w=640&q=75',
+            title: 'T-shirt',
+            price: '66',
+            quality: '2',
+        },
+        {
+            src: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Finstagram%2Finsta1.jpg&w=640&q=75',
+            title: 'T-shirt',
+            price: '66',
+            quality: '2',
+        },
+        {
+            src: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Finstagram%2Finsta1.jpg&w=640&q=75',
+            title: 'T-shirt',
+            price: '66',
+            quality: '2',
+        },
+        {
+            src: 'https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Finstagram%2Finsta1.jpg&w=640&q=75',
+            title: 'T-shirt',
+            price: '66',
+            quality: '2',
+        },
+    ];
+
+    let String = JSON.stringify(MyArray);
+
+    localStorage.setItem('key', String);
 
     return (
         <div className="wrapper">
@@ -279,7 +364,9 @@ export default function Home() {
                     </div>
                 </div>
             </section>
+
             <div className="mb-4 pb-4 mb-xl-5 pb-xl-5"></div>
+
             <section className="container" style={{ padding: '0px 15px', maxWidth: '1140px' }}>
                 <div className={cx('products-grid')}>
                     <h2 className={cx('section-title')}>
@@ -435,15 +522,72 @@ export default function Home() {
 
             <div className="mb-3 mb-xl-5 pb-1 pb-xl-5" />
 
-            <section className="container">
+            <section className="container mb-3" style={{ padding: '0 15px' }}>
                 <div className={cx('products-carousel')}>
                     <h2 className={cx('section-title')}>
                         limited <strong>edition</strong>
                     </h2>
 
-                    <div className="position-relative"></div>
+                    <div className="position-relative">
+                        <SliderProductHomePage />
+                    </div>
                 </div>
             </section>
+
+            <seconds className="container mb-3">
+                <h2 className="section-title text-uppercase text-center mb-4 pb-xl-2 mb-xl-4">@UOMO</h2>
+
+                <div
+                    className="row row-cols-3 row-cols-md-4 row-cols-xl-6 section-container"
+                    // style={{ width: '1116px', margin: '0 9.844rem' }}
+                >
+                    {List_instagram.map((item, index) => {
+                        return (
+                            <div
+                                className="instagram__tile col"
+                                key={index}
+                                style={{ position: 'relative', display: 'flex' }}
+                            >
+                                <a className={cx('item-instagram')} href="/">
+                                    <img className={cx('img_instagram')} src={item.src} />
+                                </a>
+                            </div>
+                        );
+                    })}
+                </div>
+            </seconds>
+
+            <div className="mb-3 mb-xl-5 pb-1 pb-xl-5" />
+
+            <div className="big-white">
+                <section className="service-promotion container mb-md-4 pb-md-4 mb-xl-5">
+                    <div className="row">
+                        <div className="col-md-4 text-center mb-5 mb-md-0">
+                            <div className="service-promotion__icon mb-4">
+                                <FontAwesomeIcon icon={faCartFlatbed} style={{ height: '52px', width: '52px' }} />
+                            </div>
+                            <h3 className="service-promotion__title h5 text-uppercase">Fast And Free Delivery</h3>
+                            <p className="service-promotion__content text-secondary">
+                                Free delivery for all orders over $140
+                            </p>
+                        </div>
+                        <div className="col-md-4 text-center mb-5 mb-md-0">
+                            <div className="service-promotion__icon mb-4">
+                                <FontAwesomeIcon icon={faHeadset} style={{ height: '52px', width: '52px' }} />
+                            </div>
+                            <h3 className="service-promotion__title h5 text-uppercase">24/7 Customer Support</h3>
+                            <p className="service-promotion__content text-secondary">Friendly 24/7 customer support</p>
+                        </div>
+                        <div className="col-md-4 text-center mb-5 mb-md-0">
+                            <div className="service-promotion__icon mb-4">
+                                <FontAwesomeIcon icon={faShieldHalved} style={{ height: '52px', width: '52px' }} />
+                            </div>
+                            <h3 className="service-promotion__title h5 text-uppercase">Money Back Guarantee</h3>
+                            <p className="service-promotion__content text-secondary">We return money within 30 days</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     );
 }

@@ -14,6 +14,7 @@
     --bs-gutter-x: 1.875rem;
 
     --content-space: 2.5rem;
+
 }
 
 * {
@@ -156,4 +157,49 @@ hr{
 
 .container{
     max-width: 1140px;
+    margin: 0 9.844rem;
+}
+
+
+.slick-list{
+    height: 100% !important ;
+}
+
+/* .slick-slide{
+    width: 250px !important;
+    margin-right: 30px;
+} */
+
+.section-title {
+    font-size: 2.1875rem;   
+}
+
+.effect {
+    position: relative;
+}
+.effect:after, .effect:before {
+    pointer-events: none;
+}
+.effect:after, .effect:before {
+    pointer-events: none;
+}
+
+    .row-cols-xl-6>* {
+        flex: 0 0 auto;
+        width: 16.6666666667%;
+    }
+
+
+.section-container{
+    width: 1116px;
+    margin: 0 9.844rem;
+}
+
+.service-promotion__title{
+    color: #222;
+    font-weight: 500;
+}
+
+.service-promotion__content {
+    font-size: .9375rem;
 }
