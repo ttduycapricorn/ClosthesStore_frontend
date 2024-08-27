@@ -2,12 +2,17 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-regular-svg-icons';
 import classNames from 'classnames/bind';
+import { toast } from 'sonner';
 
 import styles from './itemCartProduct.module.scss';
 
 const cx = classNames.bind(styles);
 
 function ItemCartProduct() {
+    // const handleAddCart = (id) => {
+    //     toast.success(`successfully add cart ${id}`);
+    // };
+
     return (
         <div className={cx('product-cart')}>
             <div className="mb-3 mb-md-4 mb-xxl-5" style={{ position: 'relative' }}>
@@ -22,7 +27,14 @@ function ItemCartProduct() {
                         src="https://uomo-nextjs-ecommerce.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fproduct_1-1.jpg&w=750&q=75"
                         alt="pc_image"
                     />
-                    <button className={cx('pc-act')}>Add To Cart</button>
+                    <button
+                        className={cx('pc-act')}
+                        onClick={() => {
+                            toast.success('successfully add cart');
+                        }}
+                    >
+                        Add To Cart
+                    </button>
                 </div>
 
                 <div className={cx('pc_info')}>

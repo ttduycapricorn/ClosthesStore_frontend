@@ -62,6 +62,21 @@ function SliderProductHomePage() {
                 <div>
                     <ItemCartProduct />
                 </div>
+                <div>
+                    <ItemCartProduct />
+                </div>
+                <div>
+                    <ItemCartProduct />
+                </div>
+                <div>
+                    <ItemCartProduct />
+                </div>
+                <div>
+                    <ItemCartProduct />
+                </div>
+                <div>
+                    <ItemCartProduct />
+                </div>
             </Slider>
         </div>
     );

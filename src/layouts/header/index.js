@@ -14,6 +14,7 @@ import CartSidebar from '@/components/sidebar/cartSidebar';
 import { dataShopping } from '@/data/cartShoppingData';
 import LargeModal from '@/components/modals/largeModal';
 import SearchModal from '@/components/modals/SearchModal';
+import LoginSidebar from '@/components/sidebar/loginSidebar';
 
 const cx = classNames.bind(styles);
 
@@ -45,7 +46,7 @@ const ListMenuItem = [
 ];
 
 function HeaderComponent() {
-    const [cartMount, setCartMount] = useState(0);
+    const [cartMount, setCartMount] = useState();
 
     const [openSearch, setOpenSearch] = useState(false);
 
@@ -81,9 +82,14 @@ function HeaderComponent() {
                 </div>
                 <div className={cx('item-action')}>
                     <div className={cx('icon')}>
-                        <Link href={'/login'}>
+                        {/* <Link href={'/login'}>
                             <FontAwesomeIcon icon={faUser} />
-                        </Link>
+                        </Link> */}
+                        <LoginSidebar
+                            name={<FontAwesomeIcon icon={faUser} style={{ width: '52px' }} />}
+                            placement={'end'}
+                            data={dataShopping}
+                        />
                     </div>
                 </div>
                 <div className={cx('item-action')}>
