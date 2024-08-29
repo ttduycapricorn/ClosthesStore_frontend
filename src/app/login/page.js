@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 import { toast } from 'sonner';
 import { useState } from 'react';
 
-import Button from '@/components/button';
+import Button from '@/components/button/default';
 import InputComponent from '@/components/input/iconic';
 
 import styles from './loginPage.module.scss';

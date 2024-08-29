@@ -4,10 +4,16 @@ import styles from './original.module.scss';
 
 const cx = classNames.bind(styles);
 
-function InputOriginNal({ label, type, placeholder }) {
+function InputOriginNal({ label, type, placeholder, value, onChange }) {
     return (
         <div className={cx('form-floating')}>
-            <input className={cx('form-control')} type={type} placeholder={placeholder} />
+            <input
+                className={cx('form-control')}
+                value={value}
+                onChange={onChange}
+                type={type}
+                placeholder={placeholder}
+            />
             <label>{label}</label>
         </div>
     );

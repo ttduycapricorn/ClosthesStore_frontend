@@ -11,7 +11,7 @@ import { toast } from 'sonner';
 import Image from 'next/image';
 
 import ProductInfoSlider from '@/sliders/ProductInfoSlider';
-import Button from '@/components/button';
+import Button from '@/components/button/default';
 import RelateProductsSlider from '@/sliders/RelateProductSlider';
 
 import styles from './product.module.scss';
