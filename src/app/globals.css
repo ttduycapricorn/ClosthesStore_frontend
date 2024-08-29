@@ -102,6 +102,11 @@ body ::-webkit-scrollbar {
     background-color: #fff;
 }
 
+.hidden-scrollbar  ::-webkit-scrollbar{
+    display: block !important;
+}
+
+
 .faded {
     opacity: 0;
 }
@@ -202,4 +207,15 @@ hr{
 
 .service-promotion__content {
     font-size: .9375rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input[type=checkbox] {
+    border-radius: 0;
 }
