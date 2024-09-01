@@ -2,20 +2,20 @@ import classNames from 'classnames/bind';
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import { toast } from 'sonner';
+import axios from 'axios';
 
 import styles from './loginSidebar.module.scss';
 
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import InputOriginNal from '@/components/input/original';
 import ButtonOrigin from '@/components/button/origin';
-import { toast } from 'sonner';
-import axios from 'axios';
+import Link from 'next/link';
 
 const cx = classNames.bind(styles);
 
 function LoginSidebar({ name, ...props }) {
     const [show, setShow] = useState(false);
-
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -33,11 +33,14 @@ function LoginSidebar({ name, ...props }) {
     const handelLogIn = () => {
         if (email && password) {
             if (!validEmail(email)) toast.error('email in valid!');
+            else {
+                toast.success('Login successfully!');
+            }
         } else {
             if (!email) toast.error('please enter you email!');
-            if (!password) toast.error('please enter your password!');
+            else if (!password) toast.error('please enter your password!');
         }
-        return axios.post('', {
+        return axios.post(GlobalBackEndURL, {
             email: email,
             password: password,
         });
@@ -64,7 +67,9 @@ function LoginSidebar({ name, ...props }) {
                                 setEmail(e.target.value);
                             }}
                         />
+
                         <div className="pb-3" />
+
                         <InputOriginNal
                             label={'password'}
                             type={'password'}
@@ -86,6 +91,13 @@ function LoginSidebar({ name, ...props }) {
                         </div>
 
                         <ButtonOrigin label={'LOG IN'} width={'100%'} onClick={handelLogIn} />
+
+                        <div className={cx('text-createAccount')}>
+                            <span>No account yet? </span>
+                            <Link className={cx('link-create-account')} href={'/'} onClick={handleClose}>
+                                Create Account
+                            </Link>
+                        </div>
                     </form>
                 </Offcanvas.Body>
             </Offcanvas>

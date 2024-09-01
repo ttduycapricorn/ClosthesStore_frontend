@@ -21,7 +21,7 @@ const cx = classNames.bind(styles);
 function ProductPage(data) {
     const [numberCart, setNumberCart] = useState(0);
     const [numberReviews, setNumberReview] = useState(0);
-    const [infoProduct, setInfoProduct] = useState();
+    const [infoProduct, setInfoProduct] = useState({});
     const [toggleSize, setToggleSize] = useState('XS');
     const [toggleColor, setToggleColor] = useState('black');
     const [toggle, setToggle] = useState('tab-description');

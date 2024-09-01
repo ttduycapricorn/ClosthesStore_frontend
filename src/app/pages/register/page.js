@@ -1,7 +1,6 @@
 'use client';
 import { useState } from 'react';
 import classNames from 'classnames/bind';
-import Link from 'next/link';
 
 import InputComponent from '@/components/input';
 import Button from '@/components/button/default';

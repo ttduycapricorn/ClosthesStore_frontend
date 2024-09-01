@@ -137,3 +137,17 @@
     text-decoration: underline;
     margin-left: auto;
 }
+
+.text-createAccount {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+
+    span {
+        color: var(--text-color-gray);
+    }
+}
+
+.link-create-account {
+    text-decoration: underline;
+}
