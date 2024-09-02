@@ -534,7 +534,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <seconds className="container mb-3">
+            <section className="container mb-3">
                 <h2 className="section-title text-uppercase text-center mb-4 pb-xl-2 mb-xl-4">@UOMO</h2>
 
                 <div
@@ -555,7 +555,7 @@ export default function Home() {
                         );
                     })}
                 </div>
-            </seconds>
+            </section>
 
             <div className="mb-3 mb-xl-5 pb-1 pb-xl-5" />
 

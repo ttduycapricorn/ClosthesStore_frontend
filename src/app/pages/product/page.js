@@ -11,7 +11,7 @@ import { toast } from 'sonner';
 import Image from 'next/image';
 
 import ProductInfoSlider from '@/sliders/ProductInfoSlider';
-import Button from '@/components/button';
+import Button from '@/components/button/default';
 import RelateProductsSlider from '@/sliders/RelateProductSlider';
 
 import styles from './product.module.scss';
@@ -21,7 +21,7 @@ const cx = classNames.bind(styles);
 function ProductPage(data) {
     const [numberCart, setNumberCart] = useState(0);
     const [numberReviews, setNumberReview] = useState(0);
-    const [infoProduct, setInfoProduct] = useState();
+    const [infoProduct, setInfoProduct] = useState({});
     const [toggleSize, setToggleSize] = useState('XS');
     const [toggleColor, setToggleColor] = useState('black');
     const [toggle, setToggle] = useState('tab-description');

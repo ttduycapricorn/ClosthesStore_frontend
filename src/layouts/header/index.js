@@ -75,45 +75,44 @@ function HeaderComponent() {
 
             <div className={cx('actions')}>
                 <div className={cx('item-action')}>
-                    <div className={cx('icon')} onClick={() => setOpenSearch(!openSearch)}>
-                        <FontAwesomeIcon icon={openSearch === false ? faMagnifyingGlass : faX} />
-                        <SearchModal />
+                    <div className={cx('icon')}>
+                        <SearchModal content={<FontAwesomeIcon icon={faMagnifyingGlass} />} />
                     </div>
                 </div>
-                <div className={cx('item-action')}>
-                    <div className={cx('icon')}>
-                        {/* <Link href={'/login'}>
+            </div>
+            <div className={cx('item-action')}>
+                <div className={cx('icon')}>
+                    {/* <Link href={'/login'}>
                             <FontAwesomeIcon icon={faUser} />
                         </Link> */}
-                        <LoginSidebar
-                            name={<FontAwesomeIcon icon={faUser} style={{ width: '52px' }} />}
-                            placement={'end'}
-                            data={dataShopping}
-                        />
-                    </div>
-                </div>
-                <div className={cx('item-action')}>
-                    <div className={cx('icon')}>
-                        <FontAwesomeIcon icon={faHeart} />
-                    </div>
-                </div>
-                <div className={cx('item-action')}>
-                    {/* <Link href={'/cart'} className={cx('icon')} onClick={() => {}}>
-                        <FontAwesomeIcon icon={faBagShopping} />
-                    </Link> */}
-                    <CartSidebar
-                        name={<FontAwesomeIcon icon={faBagShopping} style={{ width: '52px' }} />}
+                    <LoginSidebar
+                        name={<FontAwesomeIcon icon={faUser} style={{ width: '52px' }} />}
                         placement={'end'}
                         data={dataShopping}
                     />
-                    <span className={cx('cart-amount')}>{cartMount || 0}</span>
                 </div>
-                <div className={cx('item-action')}>
-                    <LargeModal />
-                    {/* <div className={cx('icon')}>
+            </div>
+            <div className={cx('item-action')}>
+                <div className={cx('icon')}>
+                    <FontAwesomeIcon icon={faHeart} />
+                </div>
+            </div>
+            <div className={cx('item-action')}>
+                {/* <Link href={'/cart'} className={cx('icon')} onClick={() => {}}>
+                        <FontAwesomeIcon icon={faBagShopping} />
+                    </Link> */}
+                <CartSidebar
+                    name={<FontAwesomeIcon icon={faBagShopping} style={{ width: '52px' }} />}
+                    placement={'end'}
+                    data={dataShopping}
+                />
+                <span className={cx('cart-amount')}>{cartMount || 0}</span>
+            </div>
+            <div className={cx('item-action')}>
+                <LargeModal />
+                {/* <div className={cx('icon')}>
                         <FontAwesomeIcon icon={faBars} />
                     </div> */}
-                </div>
             </div>
         </div>
     );

@@ -7,14 +7,13 @@
     --tw-ring-shadow: 0 0 #0000;
     --tw-shadow: var(--ds-shadow-border-medium);
 
-    --black: #222
+    --black: #222;
     --gray: #faf9f8;
     --text-color-gray: #767676;
     --color-hr: #e4e4e4;
     --bs-gutter-x: 1.875rem;
 
     --content-space: 2.5rem;
-
 }
 
 * {
@@ -85,8 +84,8 @@ ul {
 
 input::placeholder {
     position: absolute;
-    top: 1rem;
-    left: 0.75rem;
+    /* top: 1rem; */
+    /* left: 0.75rem; */
     padding: 0 0.1rem;
     pointer-events: none;
     border: 0.125rem solid transparent;
@@ -100,6 +99,10 @@ body ::-webkit-scrollbar {
     width: 0.25rem;
     height: 0.25rem;
     background-color: #fff;
+}
+
+.hidden-scrollbar ::-webkit-scrollbar {
+    display: block !important;
 }
 
 .faded {
@@ -149,19 +152,17 @@ input[type='number']::-webkit-outer-spin-button {
     margin: 0;
 }
 
-
-hr{
+hr {
     border: none;
     margin: 0;
 }
 
-.container{
+.container {
     max-width: 1140px;
     margin: 0 9.844rem;
 }
 
-
-.slick-list{
+.slick-list {
     height: 100% !important ;
 }
 
@@ -171,35 +172,54 @@ hr{
 } */
 
 .section-title {
-    font-size: 2.1875rem;   
+    font-size: 2.1875rem;
 }
 
 .effect {
     position: relative;
 }
-.effect:after, .effect:before {
+.effect:after,
+.effect:before {
     pointer-events: none;
 }
-.effect:after, .effect:before {
+.effect:after,
+.effect:before {
     pointer-events: none;
 }
 
-    .row-cols-xl-6>* {
-        flex: 0 0 auto;
-        width: 16.6666666667%;
-    }
+.row-cols-xl-6 > * {
+    flex: 0 0 auto;
+    width: 16.6666666667%;
+}
 
-
-.section-container{
+.section-container {
     width: 1116px;
-    margin: 0 9.844rem;
 }
 
-.service-promotion__title{
+.service-promotion__title {
     color: #222;
     font-weight: 500;
 }
 
 .service-promotion__content {
-    font-size: .9375rem;
+    font-size: 0.9375rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+input[type='checkbox'] {
+    border-radius: 0;
+}
+
+.menu-link {
+    display: inline-block;
+    position: relative;
+    padding: 0.5em 0;
+    color: #222;
+    line-height: 1.5em;
 }

@@ -9,10 +9,6 @@ import styles from './itemCartProduct.module.scss';
 const cx = classNames.bind(styles);
 
 function ItemCartProduct() {
-    // const handleAddCart = (id) => {
-    //     toast.success(`successfully add cart ${id}`);
-    // };
-
     return (
         <div className={cx('product-cart')}>
             <div className="mb-3 mb-md-4 mb-xxl-5" style={{ position: 'relative' }}>
