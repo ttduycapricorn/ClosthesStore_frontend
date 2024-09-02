@@ -1,9 +1,11 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+import RangeSlider from 'react-range-slider-input';
 
 import styles from './searchPage.module.scss';
 
@@ -95,27 +97,41 @@ const ListColor = [
     },
 ];
 
-const ListSize = [
+const listBrandData = [
     {
-        size: 'XS',
+        brand: 'Adidas',
+        count: 2,
+        choose: false,
     },
     {
-        size: 'XS',
+        brand: 'Balmain',
+        count: 7,
+        choose: false,
     },
     {
-        size: 'XS',
+        brand: 'Balenciaga',
+        count: 10,
+        choose: false,
     },
     {
-        size: 'XS',
+        brand: 'Burberry',
+        count: 39,
+        choose: false,
     },
     {
-        size: 'XS',
+        brand: 'Kenzo',
+        count: 95,
+        choose: false,
     },
     {
-        size: 'XS',
+        brand: 'Givenchy',
+        count: 1092,
+        choose: false,
     },
     {
-        size: 'XS',
+        brand: 'Zara',
+        count: 48,
+        choose: false,
     },
 ];
 
@@ -141,18 +157,60 @@ function SearchPage() {
 
     const [color, setColor] = useState('blue');
 
-    const handleShow = (item) => {
-        for (let i = 0; i > setItem.length; i++) {
-            if (setItem[i].title === item) setShowItem(!setItem[i].show);
-        }
-        for (let i = 0; i > setItem.length; i++) {
-            console.log(setItem[i]);
-        }
-    };
+    const [sizeProduct, setSizeProduct] = useState([
+        {
+            title: 'XS',
+            active: false,
+        },
+        {
+            title: 'S',
+            active: false,
+        },
+        {
+            title: 'm',
+            active: false,
+        },
+        {
+            title: 'l',
+            active: false,
+        },
+        {
+            title: 'xl',
+            active: false,
+        },
+        {
+            title: 'xxl',
+            active: false,
+        },
+    ]);
+
+    const [listBrand, setListBrand] = useState(listBrandData);
+
+    const handleShow = (item) => {};
 
     const handleChooseColor = (color) => {
         setColor(color);
     };
+
+    const handleChooseSize = (size_IsChoose) => {
+        setSizeProduct((prevSizeProduct) =>
+            prevSizeProduct.map((item) => (item.title === size_IsChoose ? { ...item, active: !item.active } : item)),
+        );
+    };
+
+    const getDataFromSizeProduct = () => {
+        return sizeProduct.filter((item) => item.active === true);
+    };
+
+    const handleChangeBrand = (brand) => {
+        setListBrand((prevBrand) => {
+            prevBrand.map((item) => (item.brand === brand ? { ...item, choose: !item.choose } : item));
+        });
+    };
+
+    useEffect(() => {
+        console.log(getDataFromSizeProduct());
+    }, [getDataFromSizeProduct, sizeProduct]);
 
     return (
         <div className="container d-flex shop-main container pt-4 pt-xl-5">
@@ -238,17 +296,102 @@ function SearchPage() {
                     </h5>
                     <div className={cx('accordion-body', 'px-0 pb-0')}>
                         <div className={cx('d-flex flex-wrap')}>
-                            <a className={cx('swatch-size', 'btn btn-sm btn-outline-light mb-3 me-3 js-filter')}>XS </a>
-                            <a className={cx('swatch-size', 'btn btn-sm btn-outline-light mb-3 me-3 js-filter')}>XS </a>
-                            <a className={cx('swatch-size', 'btn btn-sm btn-outline-light mb-3 me-3 js-filter')}>XS </a>
-                            <a className={cx('swatch-size', 'btn btn-sm btn-outline-light mb-3 me-3 js-filter')}>XS </a>
-                            <a className={cx('swatch-size', 'btn btn-sm btn-outline-light mb-3 me-3 js-filter')}>XS </a>
-                            <a className={cx('swatch-size', 'btn btn-sm btn-outline-light mb-3 me-3 js-filter')}>XS </a>
-                            <a className={cx('swatch-size', 'btn btn-sm btn-outline-light mb-3 me-3 js-filter')}>XS </a>
+                            {sizeProduct.map((item, index) => {
+                                return (
+                                    <a
+                                        className={
+                                            item.active === true
+                                                ? cx(
+                                                      'swatch-size',
+                                                      'btn btn-sm btn-outline-light mb-3 me-3 js-filter',
+                                                      'active',
+                                                  )
+                                                : cx('swatch-size', 'btn btn-sm btn-outline-light mb-3 me-3 js-filter')
+                                        }
+                                        key={index}
+                                        onClick={() => {
+                                            handleChooseSize(item.title);
+                                        }}
+                                    >
+                                        {item.title}
+                                    </a>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>
+
+                <div className={cx('accordion-item', 'mb-4')}>
+                    <h5 className="text-uppercase">
+                        <button
+                            className={cx('accordion-btn')}
+                            onClick={() => {
+                                handleShow('color');
+                            }}
+                        >
+                            brands
+                            <div className={cx('icon')}>
+                                <FontAwesomeIcon icon={setItem[2].show === true ? faMinus : faPlus} />
+                            </div>
+                        </button>
+                    </h5>
+
+                    <div className={cx('search-field', 'multi-select accordion-body px-0 pb-0')}>
+                        <ul className={cx('multi-select__list list-unstyled')}>
+                            {listBrand.map((item, index) => {
+                                return (
+                                    <li
+                                        className={
+                                            item.choose === true
+                                                ? cx(
+                                                      'search-suggestion__item',
+                                                      'multi-select__item',
+                                                      'text-primary',
+                                                      'js-search-select js-multi-select',
+                                                      'active-multi-select',
+                                                  )
+                                                : cx(
+                                                      'search-suggestion__item',
+                                                      'multi-select__item',
+                                                      'text-primary',
+                                                      'js-search-select js-multi-select',
+                                                  )
+                                        }
+                                        key={index}
+                                        onClick={() => {
+                                            handleChangeBrand(item.brand);
+                                        }}
+                                    >
+                                        <span className={cx('me-auto')}>{item.brand}</span>
+                                        <span className={cx('text-secondary')}>{item.count}</span>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="accordion-item mb-4">
+                    <h5 className="text-uppercase">
+                        <button
+                            className={cx('accordion-btn')}
+                            onClick={() => {
+                                handleShow('color');
+                            }}
+                        >
+                            price
+                            <div className={cx('icon')}>
+                                <FontAwesomeIcon icon={setItem[2].show === true ? faMinus : faPlus} />
+                            </div>
+                        </button>
+                    </h5>
+
+                    <div className={cx('')}>
+                        <RangeSlider min={0} max={100} step={5} />
+                    </div>
+                </div>
             </div>
+
             <div className={cx('content')}>content component</div>
         </div>
     );

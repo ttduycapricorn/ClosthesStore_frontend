@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'tippy.js/dist/tippy.css';
+import 'react-range-slider-input/dist/style.css';
 
 import FooterComponent from '@/layouts/footer';
 import HeaderComponent from '@/layouts/header';
