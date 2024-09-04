@@ -1,13 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 'use client';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
-import RangeSlider from 'react-range-slider-input';
 
 import styles from './searchPage.module.scss';
+import SuperSimple from '@/components/ranges/default';
+import ItemCartProduct from '@/components/items/itemCartProduct';
 
 const cx = classNames.bind(styles);
 
@@ -186,6 +187,8 @@ function SearchPage() {
 
     const [listBrand, setListBrand] = useState(listBrandData);
 
+    const [priceRange, setPriceRange] = useState(50);
+
     const handleShow = (item) => {};
 
     const handleChooseColor = (color) => {
@@ -198,19 +201,19 @@ function SearchPage() {
         );
     };
 
-    const getDataFromSizeProduct = () => {
-        return sizeProduct.filter((item) => item.active === true);
-    };
-
     const handleChangeBrand = (brand) => {
-        setListBrand((prevBrand) => {
-            prevBrand.map((item) => (item.brand === brand ? { ...item, choose: !item.choose } : item));
-        });
+        setListBrand((prevBrand) =>
+            prevBrand.map((item) => (item.brand === brand ? { ...item, choose: !item.choose } : item)),
+        );
     };
 
-    useEffect(() => {
-        console.log(getDataFromSizeProduct());
-    }, [getDataFromSizeProduct, sizeProduct]);
+    const getBrandData = () => {
+        return listBrand.filter((item) => item.choose === true);
+    };
+
+    const handleChangeDataPrice = (data) => {
+        setPriceRange(data);
+    };
 
     return (
         <div className="container d-flex shop-main container pt-4 pt-xl-5">
@@ -386,13 +389,30 @@ function SearchPage() {
                         </button>
                     </h5>
 
-                    <div className={cx('')}>
-                        <RangeSlider min={0} max={100} step={5} />
+                    <SuperSimple onDataChange={handleChangeDataPrice} />
+
+                    <div className={cx('price-range__info', 'd-flex align-items-center mt-2')}>
+                        <div className={cx('me-auto')}>
+                            <span className={cx('text-secondary')}>Price: </span>
+                            <span className={cx('price-range')}>$ {priceRange}</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div className={cx('content')}>content component</div>
+            <div className={cx('shop-list', 'flex-grow-1')}>
+                <div className={cx('class="products-grid', 'row row-cols-2 row-cols-md-3  row-cols-lg-3"')}>
+                    <ItemCartProduct />
+                    <ItemCartProduct />
+                    <ItemCartProduct />
+                    <ItemCartProduct />
+                    <ItemCartProduct />
+                    <ItemCartProduct />
+                    <ItemCartProduct />
+                    <ItemCartProduct />
+                    <ItemCartProduct />
+                </div>
+            </div>
         </div>
     );
 }
