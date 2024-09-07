@@ -16,7 +16,8 @@
     }
 }
 
-.form-control {
+.form-control,
+.focus {
     height: calc(3.625rem + 2px);
     padding: 1.125rem 1.3125rem 0.9rem;
     display: block;
@@ -41,6 +42,13 @@
         label {
             top: -1.1rem;
         }
+    }
+}
+
+.focus {
+    border-color: var(--black);
+    label {
+        top: -1.1rem;
     }
 }
 

@@ -66,6 +66,10 @@ function LoginSidebar({ name, ...props }) {
                             onChange={(e) => {
                                 setEmail(e.target.value);
                             }}
+                            onFocus={() => {
+                                if (email !== '') return true;
+                                else return false;
+                            }}
                         />
 
                         <div className="pb-3" />

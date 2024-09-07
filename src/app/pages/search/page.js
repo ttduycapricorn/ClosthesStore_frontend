@@ -98,6 +98,33 @@ const ListColor = [
     },
 ];
 
+const ListSizeProduct = [
+    {
+        title: 'XS',
+        active: false,
+    },
+    {
+        title: 'S',
+        active: false,
+    },
+    {
+        title: 'm',
+        active: false,
+    },
+    {
+        title: 'l',
+        active: false,
+    },
+    {
+        title: 'xl',
+        active: false,
+    },
+    {
+        title: 'xxl',
+        active: false,
+    },
+];
+
 const listBrandData = [
     {
         brand: 'Adidas',
@@ -136,57 +163,30 @@ const listBrandData = [
     },
 ];
 
+const ListItemProduct = [
+    {
+        title: 'Product Categories',
+        show: true,
+    },
+    {
+        title: 'color',
+        show: true,
+    },
+    {
+        title: 'Product Categories',
+        show: true,
+    },
+    {
+        title: 'Product Categories',
+        show: true,
+    },
+];
+
 function SearchPage() {
-    const [setItem, setShowItem] = useState([
-        {
-            title: 'Product Categories',
-            show: true,
-        },
-        {
-            title: 'color',
-            show: true,
-        },
-        {
-            title: 'Product Categories',
-            show: true,
-        },
-        {
-            title: 'Product Categories',
-            show: true,
-        },
-    ]);
-
+    const [setItem, setShowItem] = useState(ListItemProduct);
     const [color, setColor] = useState('blue');
-
-    const [sizeProduct, setSizeProduct] = useState([
-        {
-            title: 'XS',
-            active: false,
-        },
-        {
-            title: 'S',
-            active: false,
-        },
-        {
-            title: 'm',
-            active: false,
-        },
-        {
-            title: 'l',
-            active: false,
-        },
-        {
-            title: 'xl',
-            active: false,
-        },
-        {
-            title: 'xxl',
-            active: false,
-        },
-    ]);
-
+    const [sizeProduct, setSizeProduct] = useState(ListSizeProduct);
     const [listBrand, setListBrand] = useState(listBrandData);
-
     const [priceRange, setPriceRange] = useState(50);
 
     const handleShow = (item) => {};
@@ -297,6 +297,7 @@ function SearchPage() {
                             </div>
                         </button>
                     </h5>
+
                     <div className={cx('accordion-body', 'px-0 pb-0')}>
                         <div className={cx('d-flex flex-wrap')}>
                             {sizeProduct.map((item, index) => {
@@ -401,6 +402,13 @@ function SearchPage() {
             </div>
 
             <div className={cx('shop-list', 'flex-grow-1')}>
+                <div className={cx('title-search-for')}>
+                    <h5 className={cx('text-searchFor')}>
+                        search for:
+                        <strong> Adidas</strong>
+                    </h5>
+                </div>
+
                 <div className={cx('class="products-grid', 'row row-cols-2 row-cols-md-3  row-cols-lg-3"')}>
                     <ItemCartProduct />
                     <ItemCartProduct />
@@ -411,7 +419,10 @@ function SearchPage() {
                     <ItemCartProduct />
                     <ItemCartProduct />
                     <ItemCartProduct />
+                    {/* temp data */}
                 </div>
+
+                <div className={cx('pagination')}></div>
             </div>
         </div>
     );
