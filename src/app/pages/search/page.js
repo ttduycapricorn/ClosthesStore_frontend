@@ -410,16 +410,16 @@ function SearchPage() {
                 </div>
 
                 <div className={cx('class="products-grid', 'row row-cols-2 row-cols-md-3  row-cols-lg-3"')}>
-                    <ItemCartProduct />
-                    <ItemCartProduct />
-                    <ItemCartProduct />
-                    <ItemCartProduct />
-                    <ItemCartProduct />
-                    <ItemCartProduct />
-                    <ItemCartProduct />
-                    <ItemCartProduct />
-                    <ItemCartProduct />
                     {/* temp data */}
+                    <ItemCartProduct />
+                    <ItemCartProduct />
+                    <ItemCartProduct />
+                    <ItemCartProduct />
+                    <ItemCartProduct />
+                    <ItemCartProduct />
+                    <ItemCartProduct />
+                    <ItemCartProduct />
+                    <ItemCartProduct />
                 </div>
 
                 <div className={cx('pagination')}></div>
