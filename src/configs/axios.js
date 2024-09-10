@@ -1,4 +1,4 @@
-const GlobalBackEndURL = 'http://localhost:8080/',
+const GlobalBackEndURL = 'http://localhost:8080/identity',
     exports = {
         GlobalBackEndURL,
     };
