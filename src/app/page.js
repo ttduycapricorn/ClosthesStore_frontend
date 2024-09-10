@@ -117,9 +117,9 @@ export default function Home() {
         },
     ];
 
-    let String = JSON.stringify(MyArray);
+    // let String = JSON.stringify(MyArray);
 
-    localStorage.setItem('key', String);
+    // localStorage.setItem('key', String);
 
     return (
         <div className="wrapper">

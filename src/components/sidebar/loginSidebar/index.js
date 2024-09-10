@@ -40,7 +40,7 @@ function LoginSidebar({ name, ...props }) {
             if (!email) toast.error('please enter you email!');
             else if (!password) toast.error('please enter your password!');
         }
-        return axios.post(GlobalBackEndURL, {
+        return axios.post(`${GlobalBackEndURL}/auth/login`, {
             email: email,
             password: password,
         });
@@ -66,6 +66,10 @@ function LoginSidebar({ name, ...props }) {
                             onChange={(e) => {
                                 setEmail(e.target.value);
                             }}
+                            onFocus={() => {
+                                if (email !== '') return true;
+                                else return false;
+                            }}
                         />
 
                         <div className="pb-3" />
@@ -78,6 +82,7 @@ function LoginSidebar({ name, ...props }) {
                             onChange={(e) => {
                                 setPassword(e.target.value);
                             }}
+                            onFocus={password ? true : false}
                         />
 
                         <div className="d-flex  mb-3 pb-2">

@@ -44,8 +44,20 @@
     }
 }
 
-.form-floating > .form-control:focus ~ label {
-    background-color: #fff;
-    color: #222;
-    transform: translateY(-1.9rem);
+.focus {
+    label {
+        background-color: #fff;
+        color: #222;
+        transform: translateY(-1.9rem);
+    }
+}
+
+.form-floating {
+    > .form-control:focus {
+        ~ label {
+            background-color: #fff;
+            color: #222;
+            transform: translateY(-1.9rem);
+        }
+    }
 }
