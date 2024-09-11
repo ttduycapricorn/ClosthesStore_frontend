@@ -4,13 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { toast } from 'sonner';
 import axios from 'axios';
+import Link from 'next/link';
 
 import styles from './loginSidebar.module.scss';
 
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 import InputOriginNal from '@/components/input/original';
 import ButtonOrigin from '@/components/button/origin';
-import Link from 'next/link';
+import { GlobalBackEndURL } from '@/configs/axios';
 
 const cx = classNames.bind(styles);
 
@@ -99,7 +100,7 @@ function LoginSidebar({ name, ...props }) {
 
                         <div className={cx('text-createAccount')}>
                             <span>No account yet? </span>
-                            <Link className={cx('link-create-account')} href={'/'} onClick={handleClose}>
+                            <Link className={cx('link-create-account')} href={'/pages/register'} onClick={handleClose}>
                                 Create Account
                             </Link>
                         </div>
