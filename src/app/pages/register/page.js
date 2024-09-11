@@ -4,11 +4,11 @@ import classNames from 'classnames/bind';
 import { toast } from 'sonner';
 import axios from 'axios';
 
-import InputComponent from '@/components/input/original';
 import Button from '@/components/button/default';
 import { GlobalBackEndURL } from '@/configs/axios';
 
 import styles from './registerPage.scss';
+import InputOriginNal from '@/components/input/original';
 
 const cx = classNames.bind(styles);
 
@@ -16,18 +16,18 @@ function RegisterPage() {
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
 
     const [validPassword, setValidPassword] = useState(true);
-
-    const handelOnChangeUsername = (e) => {
-        setUserName(e.target.value);
-    };
 
     const handelOnChangePassword = (e) => {
         setPassword(e.target.value);
     };
     const handelOnchangeEmail = (e) => {
         setEmail(e.target.value);
+    };
+    const handleConfirmPassword = (e) => {
+        setConfirmPassword(e.target.value);
     };
 
     const isValidEmail = (email) => {
@@ -42,14 +42,24 @@ function RegisterPage() {
         if (email && password) {
             if (!isValidEmail(email)) {
                 toast.error('email in valid!');
+                return;
+            } else if (confirmPassword !== password) {
+                toast.error(`confirm password don't match with password`);
+                return;
             } else {
-                toast.success('Login successfully!');
+                toast.success('Register successfully!');
+                return;
             }
         } else {
             if (!email) {
                 toast.error('please enter you email!');
+                return;
             } else if (!password) {
                 toast.error('please enter your password!');
+                return;
+            } else if (confirmPassword !== password) {
+                toast.error(`Conform password don't match with password!`);
+                return;
             }
         }
         return axios
@@ -69,7 +79,7 @@ function RegisterPage() {
                 <div className={cx('label-form')}>
                     <h3 className={cx('label')}>register</h3>
                 </div>
-                <div className={cx('input-wrapper')}>
+                {/* <div className={cx('input-wrapper')}>
                     <InputComponent
                         classNameCustom={'default'}
                         title={'Enter user name'}
@@ -99,6 +109,38 @@ function RegisterPage() {
                         onChange={handelOnChangePassword}
                         placeholder={'Enter your password*'}
                     />
+                </div> */}
+
+                <InputOriginNal
+                    label={'User name or email address *'}
+                    type={'email'}
+                    value={email}
+                    onChange={(e) => {
+                        handelOnchangeEmail(e);
+                    }}
+                />
+                <InputOriginNal
+                    label={'Password *'}
+                    type={'password'}
+                    value={password}
+                    onChange={(e) => {
+                        handelOnChangePassword(e);
+                    }}
+                />
+                <InputOriginNal
+                    label={'Confirm Password *'}
+                    type={'password'}
+                    value={confirmPassword}
+                    onChange={(e) => {
+                        handleConfirmPassword(e);
+                    }}
+                />
+
+                <div className={cx('d-flex algin-items-center mb-3 pb-2')}>
+                    <p className={cx('m-0')}>
+                        Your personal data will be used to support your experience throughout this website, to manage
+                        access to your account, and for other purposes described in our privacy policy.
+                    </p>
                 </div>
 
                 <Button tittle={'register'} width={'500px'} onClickCustom={handleRegister} />
