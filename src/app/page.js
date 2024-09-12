@@ -16,7 +16,7 @@ import ItemCartProduct from '@/components/items/itemCartProduct';
 import { useCountdown } from '@/hooks/CountDownHook';
 import SliderProductHomePage from '@/sliders/sliderProductInHomePage';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartFlatbed, faHeadset, faShieldAlt, faShieldHalved } from '@fortawesome/free-solid-svg-icons';
+import { faCartFlatbed, faHeadset, faShieldHalved } from '@fortawesome/free-solid-svg-icons';
 
 const cx = classNames.bind(styles);
 

@@ -6,9 +6,9 @@ import axios from 'axios';
 
 import Button from '@/components/button/default';
 import { GlobalBackEndURL } from '@/configs/axios';
+import InputOriginNal from '@/components/input/original';
 
 import styles from './registerPage.scss';
-import InputOriginNal from '@/components/input/original';
 
 const cx = classNames.bind(styles);
 
@@ -52,7 +52,7 @@ function RegisterPage() {
             }
         } else {
             if (!email) {
-                toast.error('please enter you email!');
+                toast.error('please enter your email!');
                 return;
             } else if (!password) {
                 toast.error('please enter your password!');
@@ -63,7 +63,7 @@ function RegisterPage() {
             }
         }
         return axios
-            .post(GlobalBackEndURL, {
+            .post(`${GlobalBackEndURL}/users/register`, {
                 username: userName,
                 email: email,
                 password: password,
@@ -74,12 +74,10 @@ function RegisterPage() {
     };
 
     return (
-        <div className={cx('wrapper')}>
-            <div className={cx('inner')}>
-                <div className={cx('label-form')}>
-                    <h3 className={cx('label')}>register</h3>
-                </div>
-                {/* <div className={cx('input-wrapper')}>
+        <div className={cx('container', 'login-register')} style={{ marginLeft: 'auto', marginRight: 'auto' }}>
+            <div className={cx('mb-4 pb-4')} />
+            <h3 className={cx('label')}>register</h3>
+            {/* <div className={cx('input-wrapper')}>
                     <InputComponent
                         classNameCustom={'default'}
                         title={'Enter user name'}
@@ -111,40 +109,41 @@ function RegisterPage() {
                     />
                 </div> */}
 
-                <InputOriginNal
-                    label={'User name or email address *'}
-                    type={'email'}
-                    value={email}
-                    onChange={(e) => {
-                        handelOnchangeEmail(e);
-                    }}
-                />
-                <InputOriginNal
-                    label={'Password *'}
-                    type={'password'}
-                    value={password}
-                    onChange={(e) => {
-                        handelOnChangePassword(e);
-                    }}
-                />
-                <InputOriginNal
-                    label={'Confirm Password *'}
-                    type={'password'}
-                    value={confirmPassword}
-                    onChange={(e) => {
-                        handleConfirmPassword(e);
-                    }}
-                />
+            <InputOriginNal
+                label={'User name or email address *'}
+                type={'email'}
+                value={email}
+                onChange={(e) => {
+                    handelOnchangeEmail(e);
+                }}
+            />
+            <div className="pb-3" />
+            <InputOriginNal
+                label={'Password *'}
+                type={'password'}
+                value={password}
+                onChange={(e) => {
+                    handelOnChangePassword(e);
+                }}
+            />
+            <div className="pb-3" />
+            <InputOriginNal
+                label={'Confirm Password *'}
+                type={'password'}
+                value={confirmPassword}
+                onChange={(e) => {
+                    handleConfirmPassword(e);
+                }}
+            />
 
-                <div className={cx('d-flex algin-items-center mb-3 pb-2')}>
-                    <p className={cx('m-0')}>
-                        Your personal data will be used to support your experience throughout this website, to manage
-                        access to your account, and for other purposes described in our privacy policy.
-                    </p>
-                </div>
-
-                <Button tittle={'register'} width={'500px'} onClickCustom={handleRegister} />
+            <div className={cx('d-flex algin-items-center mb-3 pb-2')}>
+                <p className={cx('m-0')}>
+                    Your personal data will be used to support your experience throughout this website, to manage access
+                    to your account, and for other purposes described in our privacy policy.
+                </p>
             </div>
+
+            <Button tittle={'register'} width={'500px'} onClickCustom={handleRegister} />
         </div>
     );
 }

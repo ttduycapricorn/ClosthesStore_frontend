@@ -6,11 +6,10 @@
     justify-content: center;
 }
 
-.label-form {
-    display: flex;
-    text-align: center;
-    width: 100%;
-    align-items: center;
+.login-register {
+    width: 40.625rem;
+    max-width: 100%;
+    padding: 0 4.6875rem;
 }
 
 .label {
@@ -18,7 +17,7 @@
     text-transform: uppercase;
     color: black;
     height: 40px;
-    width: 60px;
+    width: 100%;
 }
 
 .inner {
