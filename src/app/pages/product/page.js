@@ -21,10 +21,16 @@ const cx = classNames.bind(styles);
 function ProductPage(data) {
     const [numberCart, setNumberCart] = useState(0);
     const [numberReviews, setNumberReview] = useState(0);
-    const [infoProduct, setInfoProduct] = useState({});
+    const [infoReview, setInfoReview] = useState(infoForPersonSubmitReview);
     const [toggleSize, setToggleSize] = useState('XS');
     const [toggleColor, setToggleColor] = useState('black');
     const [toggle, setToggle] = useState('tab-description');
+
+    var infoForPersonSubmitReview = {
+        name: '',
+        email: '',
+        description: '',
+    };
 
     const handelChangeToggleSize = (size) => {
         setToggleSize(size);
