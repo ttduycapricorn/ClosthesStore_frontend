@@ -13,7 +13,7 @@ import styles from './header.module.scss';
 import CartSidebar from '@/components/sidebar/cartSidebar';
 import { dataShopping } from '@/data/cartShoppingData';
 import LargeModal from '@/components/modals/largeModal';
-import SearchModal from '@/components/modals/SearchModal';
+import SearchModal from '@/components/modals/searchModal';
 import LoginSidebar from '@/components/sidebar/loginSidebar';
 
 const cx = classNames.bind(styles);
