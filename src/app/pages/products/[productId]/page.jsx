@@ -2,7 +2,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/jsx-no-comment-textnodes */
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMinus, faPlus, faStar } from '@fortawesome/free-solid-svg-icons';
@@ -18,10 +18,10 @@ import styles from './product.module.scss';
 
 const cx = classNames.bind(styles);
 
-function ProductPage(data) {
+function ProductPage(data, { params }) {
     const [numberCart, setNumberCart] = useState(0);
     const [numberReviews, setNumberReview] = useState(0);
-    const [infoReview, setInfoReview] = useState(infoForPersonSubmitReview);
+    // const [infoReview, setInfoReview] = useState(infoForPersonSubmitReview);
     const [toggleSize, setToggleSize] = useState('XS');
     const [toggleColor, setToggleColor] = useState('black');
     const [toggle, setToggle] = useState('tab-description');
@@ -49,6 +49,12 @@ function ProductPage(data) {
     //         return axios.get(`localhost:8080/product${id}`);
     //     }, []),
     // );
+
+    const handleSubmitReview = () => {};
+
+    useEffect(() => {
+        console.log(params.productId);
+    }, []);
 
     return (
         <div className={cx('wrapper')}>
@@ -444,6 +450,7 @@ function ProductPage(data) {
                                             src={data.avatar ? data.avatar : '/avatarDefault.png'}
                                             width={60}
                                             height={60}
+                                            alt="avatar"
                                         />
                                     </div>
 
@@ -470,6 +477,7 @@ function ProductPage(data) {
                                             src={data.avatar ? data.avatar : '/avatarDefault.png'}
                                             width={60}
                                             height={60}
+                                            alt="avatar"
                                         />
                                     </div>
 
