@@ -18,7 +18,7 @@ import styles from './product.module.scss';
 
 const cx = classNames.bind(styles);
 
-function ProductPage(data, { params }) {
+function ProductPage(data) {
     const [numberCart, setNumberCart] = useState(0);
     const [numberReviews, setNumberReview] = useState(0);
     // const [infoReview, setInfoReview] = useState(infoForPersonSubmitReview);
@@ -51,10 +51,6 @@ function ProductPage(data, { params }) {
     // );
 
     const handleSubmitReview = () => {};
-
-    useEffect(() => {
-        console.log(params.productId);
-    }, []);
 
     return (
         <div className={cx('wrapper')}>
