@@ -9,7 +9,7 @@ import 'react-range-slider-input/dist/style.css';
 import FooterComponent from '@/layouts/footer';
 import HeaderComponent from '@/layouts/header';
 
-import './globals.css';
+import './globals.scss';
 
 // const inter = Inter({ subsets: ["latin"] });
 
