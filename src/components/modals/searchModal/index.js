@@ -6,6 +6,7 @@ import styles from './SearchModal.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import Link from 'next/link';
+import { toast } from 'sonner';
 
 const cx = classNames.bind(styles);
 
@@ -34,6 +35,7 @@ const menuItems = [
 
 function ModalSearch({ content }) {
     const [show, setShow] = useState(false);
+    const [SearchData, setSearchData] = useState('');
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -58,8 +60,25 @@ function ModalSearch({ content }) {
                     <div className="position-relative">
                         <form>
                             <div className="position-relative">
-                                <input className={cx('search-input-popup')} type="text" placeholder="Search products" />
-                                <div className={cx('icon')}>
+                                <input
+                                    className={cx('search-input-popup')}
+                                    type="text"
+                                    placeholder="Search products"
+                                    value={SearchData}
+                                    onChange={(e) => {
+                                        setSearchData(e.target.value);
+                                    }}
+                                />
+                                <div
+                                    className={cx('icon')}
+                                    onClick={() => {
+                                        if (SearchData === '') {
+                                            toast.error('please insert what do you want to search!');
+                                        } else {
+                                            toast.success('Search ' + `"` + SearchData + `"` + ' successful!');
+                                        }
+                                    }}
+                                >
                                     <FontAwesomeIcon icon={faSearch} />
                                 </div>
                             </div>
